@@ -1,16 +1,20 @@
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 const middle = require('../middle');
 
-// Test cases
-assertArraysEqual(middle([]), []);
-assertArraysEqual(middle([1]), []);
-assertArraysEqual(middle([1,2]), []);
-assertArraysEqual(middle([1,2,3]), [2]);
-assertArraysEqual(middle([1,2,3,4]), [2,3]);
-assertArraysEqual(middle([1,2,3,4,5]), [3]);
-assertArraysEqual(middle([1,2,3,4,5,6]), [3,4]);
+describe("#middle", () => {
+  it("returns an empty array when 0 items in submitted array", () => {
+    assert.deepEqual(middle([]), []);
+  });
 
-const words = ["hello", "world", "lighthouse"];
-middle(words); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+  it("returns an empty array when 1 item in submitted array", () => {
+    assert.deepEqual(middle([1]), []);
+  });
+
+  it("returns the middle item when an odd # of items in submitted array", () => {
+    assert.deepEqual(middle([1,2,3]), [2]);
+  });
+
+  it("returns the two middle items when an even # items in submitted array", () => {
+    assert.deepEqual(middle([1,2,3,4]), [2,3]);
+  });
+});
