@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@dave4174/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "Utilities developed during the Lighthouse Labs boot camp",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "test"
@@ -14,7 +14,10 @@
     "url": "git+https://github.com/Dave4174/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "David Lang",
+    "email": "dlang4174@gmail.com"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Dave4174/lotide/issues"
